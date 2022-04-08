@@ -91,7 +91,7 @@ class Pokemon:
     def set_pd(self, pd):
         self.pd= pd
 
-    def esta_vivo(self, pv):
+    def esta_vivo(self):
         if self.pv == 0:
             return True
         else:
@@ -108,3 +108,10 @@ def crear_pokemon():
     pd = input()
     pokemon = Pokemon(id, nombre, arma, pv, pa, pd)
     print("Tu pokemon se llama " + str(pokemon.nombre) + " , de id " + str(pokemon.id) + ". Su arma es " + str(pokemon.arma) + " , y los puntos de vida, ataque y defensa son: " + str(pokemon.pv) + str(pokemon.pa) + str(pokemon.pd), + " respectivamente.")
+
+
+def ataque(pokemon, pokemon_dañado):
+    pass
+
+def defensa(pokemon, pokemon_dañado):
+    pass
