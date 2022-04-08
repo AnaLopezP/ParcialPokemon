@@ -91,3 +91,11 @@ class Pokemon:
     def set_pd(self, pd):
         self.pd= pd
 
+
+def crear_pokemon():
+    id = input()
+    nombre = input()
+    arma = input()
+    pv = input()
+    pa = input()
+    pd = input()
