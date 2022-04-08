@@ -99,3 +99,5 @@ def crear_pokemon():
     pv = input()
     pa = input()
     pd = input()
+    pokemon = Pokemon(id, nombre, arma, pv, pa, pd)
+    print("Tu pokemon se llama " + str(pokemon.nombre) + " , de id " + str(pokemon.id) + ". Su arma es " + str(pokemon.arma) + " , y los puntos de vida, ataque y defensa son: " + str(pokemon.pv) + str(pokemon.pa) + str(pokemon.pd), + " respectivamente.")
