@@ -141,6 +141,14 @@ class Pokemon_Aire(Pokemon):
 class Pokemon_Electro(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
         super().__init__(id, nombre, arma, pv, pa, pd)
+    
+    def fight_attack(pv):
+        doble = random.randint(1, 2)
+        if doble == 1:
+            pv = 2*pv
+            return pv
+        elif doble == 2:
+            return False
 
 
 def crear_pokemon():
