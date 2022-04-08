@@ -1,4 +1,11 @@
 import random
+class formato_excepcion(BaseException):
+    def __init__(self, mensaje):
+        self.mensaje = mensaje
+
+    def get_mensaje(self):
+        return self.mensaje
+
 class Pokemon:
     def __init__(self, id, nombre, arma, pv, pa, pd):
         self.id = id
@@ -7,7 +14,36 @@ class Pokemon:
         self.pv = pv
         self.pa = pa
         self.pd = pd
+        if isinstance(id, int):
+            pass
+        else:
+            raise formato_excepcion("El ID tiene que ser un número")
+
+        if isinstance(nombre, str):
+            pass
+        else:
+            raise formato_excepcion("Ese nombre no es valido.")
         
+        if isinstance(arma, str):
+            pass
+        else:
+            raise formato_excepcion("Esa arma no es valida.")
+
+        if isinstance(pv, int):
+            pass
+        else:
+            raise formato_excepcion("Esos puntos de vida no son validos.")
+
+        if isinstance(pa, int):
+            pass
+        else:
+            raise formato_excepcion("Esos puntos de ataque no son validos.")
+
+        if isinstance(pd, int):
+            pass
+        else:
+            raise formato_excepcion("Esos puntos de defensa no son validos.")
+            
 
     def get_id(self):
         return self.id
