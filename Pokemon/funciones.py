@@ -91,12 +91,11 @@ class Pokemon:
     def set_pd(self, pd):
         self.pd= pd
 
-    def __del__(self):
-        
-
     def esta_vivo(self, pv):
         if self.pv == 0:
-            print("Tu pokemon se ha debilitado")
+            return True
+        else:
+            return False
 
 
 
