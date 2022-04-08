@@ -110,6 +110,23 @@ class Pokemon:
         else:
             return False
 
+class Pokemon_Agua(Pokemon):
+    def __init__(self, id, nombre, arma, pv, pa, pd):
+        super().__init__(id, nombre, arma, pv, pa, pd)
+
+
+class Pokemon_Tierra(Pokemon):
+    def __init__(self, id, nombre, arma, pv, pa, pd):
+        super().__init__(id, nombre, arma, pv, pa, pd)
+
+class Pokemon_Aire(Pokemon):
+    def __init__(self, id, nombre, arma, pv, pa, pd):
+        super().__init__(id, nombre, arma, pv, pa, pd)
+
+class Pokemon_Electro(Pokemon):
+    def __init__(self, id, nombre, arma, pv, pa, pd):
+        super().__init__(id, nombre, arma, pv, pa, pd)
+
 
 def crear_pokemon():
     id = input()
