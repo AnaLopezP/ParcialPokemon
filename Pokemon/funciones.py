@@ -113,15 +113,21 @@ class Pokemon:
 class Pokemon_Agua(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
         super().__init__(id, nombre, arma, pv, pa, pd)
+        if pa < 11 or pa > 20:
+            raise rango_excepcion("Los puntos de ataque tienen que estar entre 11 y 20")
 
 
 class Pokemon_Tierra(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
         super().__init__(id, nombre, arma, pv, pa, pd)
+        if pd < 11 or pd > 20:
+            raise rango_excepcion("Los puntos de defensa tienen que estar entre 11 y 20")
 
 class Pokemon_Aire(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
         super().__init__(id, nombre, arma, pv, pa, pd)
+
+    def fight_defense()
 
 class Pokemon_Electro(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
