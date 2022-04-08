@@ -1,11 +1,17 @@
-import random
-from statistics import pvariance
+
 class formato_excepcion(BaseException):
     def __init__(self, mensaje):
         self.mensaje = mensaje
 
     def get_mensaje(self):
         return self.mensaje
+class rango_excepcion(BaseException):
+    def __init__(self, mensaje):
+        self.mensaje = mensaje
+
+    def get_mensaje(self):
+        return self.mensaje
+
 
 class Pokemon:
     def __init__(self, id, nombre, arma, pv, pa, pd):
@@ -31,17 +37,20 @@ class Pokemon:
             raise formato_excepcion("Esa arma no es valida.")
 
         if isinstance(pv, int):
-            pass
+            if pv < 1 or pv > 100:
+                raise rango_excepcion("Los PV tienen que estar entre 1 y 100")
         else:
             raise formato_excepcion("Esos puntos de vida no son validos.")
 
         if isinstance(pa, int):
-            pass
+            if pa < 1 or pa > 10:
+                raise rango_excepcion("Los PA tienen que estar entre 1 y 10")
         else:
             raise formato_excepcion("Esos puntos de ataque no son validos.")
 
         if isinstance(pd, int):
-            pass
+            if pd < 1 or pd > 10:
+                raise rango_excepcion("Los PD tienen que estar entre 1 y 10")
         else:
             raise formato_excepcion("Esos puntos de defensa no son validos.")
             
