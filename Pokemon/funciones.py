@@ -1,6 +1,4 @@
-from typing import overload
-
-
+import random
 class Pokemon:
     def __init__(self, id, nombre, arma, pv, pa, pd):
         self.id = id
@@ -9,6 +7,7 @@ class Pokemon:
         self.pv = pv
         self.pa = pa
         self.pd = pd
+        
 
     def get_id(self):
         return self.id
@@ -32,16 +31,17 @@ class Pokemon:
         return self.pv
    
     def set_pv(self, pv):
-        self.pv= pv
+        self.pv= random.randint(1, 100)
         
     def get_pa(self):
         return self.pa
    
     def set_pa(self, pa):
-        self.pa= pa
+        self.pa= random.randint(1, 100)
         
     def get_pd(self):
         return self.pd
    
     def set_pd(self, pd):
-        self.pd= pd
+        self.pd= random.randint(1, 100)
+
