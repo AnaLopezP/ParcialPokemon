@@ -1,4 +1,5 @@
 import random
+from statistics import pvariance
 class formato_excepcion(BaseException):
     def __init__(self, mensaje):
         self.mensaje = mensaje
@@ -67,17 +68,17 @@ class Pokemon:
         return self.pv
    
     def set_pv(self, pv):
-        self.pv= random.randint(1, 100)
+        self.pv= pv
         
     def get_pa(self):
         return self.pa
    
     def set_pa(self, pa):
-        self.pa= random.randint(1, 100)
+        self.pa = pa
         
     def get_pd(self):
         return self.pd
    
     def set_pd(self, pd):
-        self.pd= random.randint(1, 100)
+        self.pd= pd
 
