@@ -1,6 +1,8 @@
 import random
+import csv
 
-
+pokemons_2 = []
+pokemons_1 = []
 class formato_excepcion(BaseException):
     def __init__(self, mensaje):
         self.mensaje = mensaje
@@ -162,3 +164,15 @@ def crear_pokemon():
     print("Tu pokemon se llama " + str(pokemon.nombre) + " , de id " + str(pokemon.id) + ". Su arma es " + str(pokemon.arma) + " , y los puntos de vida, ataque y defensa son: " + str(pokemon.pv) + str(pokemon.pa) + str(pokemon.pd), + " respectivamente.")
 
 
+def sacar_pokemon(archivo, lista):
+    with open (archivo) as file:
+        delimitador = ';'
+        leer = csv.DictReader(file, delimiter = delimitador)
+        for row in leer:
+            lista.append(row)
+            print(lista)
+    return lista
+
+
+sacar_pokemon('coach_1_pokemons.csv', pokemons_1)
+sacar_pokemon('coach_2_pokemons.csv', pokemons_2)
