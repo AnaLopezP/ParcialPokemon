@@ -1,4 +1,3 @@
-
 class formato_excepcion(BaseException):
     def __init__(self, mensaje):
         self.mensaje = mensaje
@@ -97,6 +96,19 @@ class Pokemon:
         else:
             return False
 
+    def defensa(self, puntos_daño):
+        if puntos_daño < self.pd:
+            return False
+        else:
+            return True
+    
+    def ataque(self, pokemon_dañado):
+        puntos_daño = input()
+        if Pokemon.defensa(puntos_daño) == True:
+            print("El pokemon " + str(pokemon_dañado) + " ha sido dañado")
+            return True
+        else:
+            return False
 
 
 def crear_pokemon():
@@ -110,8 +122,3 @@ def crear_pokemon():
     print("Tu pokemon se llama " + str(pokemon.nombre) + " , de id " + str(pokemon.id) + ". Su arma es " + str(pokemon.arma) + " , y los puntos de vida, ataque y defensa son: " + str(pokemon.pv) + str(pokemon.pa) + str(pokemon.pd), + " respectivamente.")
 
 
-def ataque(pokemon, pokemon_dañado):
-    pass
-
-def defensa(pokemon, pokemon_dañado):
-    pass
