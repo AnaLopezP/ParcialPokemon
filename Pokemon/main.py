@@ -5,6 +5,9 @@ if __name__ == '__main__':
     print(Eevee.__str__())
     Charmander = funciones.Pokemon(2345, "Charmander", "Puñetazo", 76, 5, 6)
     print(Charmander.__str__())
-    funciones.Pokemon.defensa(Charmander, 5)
-    funciones.Pokemon.ataque(Eevee, Charmander)
+    hola = funciones.Pokemon.defensa(Charmander)
+    print(hola)
+    adios = funciones.Pokemon.ataque(Eevee, Charmander)
+    print(adios)
+    
     
