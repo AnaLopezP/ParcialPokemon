@@ -110,7 +110,7 @@ class Pokemon:
     
     def ataque(self, pokemon_dañado):
         if Pokemon.defensa(self) == True:
-            print("El pokemon " + str(pokemon_dañado) + " ha sido dañado")
+            print("El pokemon " + str(pokemon_dañado.nombre) + " ha sido dañado")
             return True
         else:
             return False
