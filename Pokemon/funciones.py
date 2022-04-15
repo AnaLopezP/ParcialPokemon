@@ -107,7 +107,7 @@ class Pokemon:
             return False
         else:
             nuevos_pv = Pokemon.get_pv(pokemon_dañado) - puntos_daño
-            Pokemon.set_pv(pv = nuevos_pv)
+            Pokemon.set_pv(pokemon_dañado, pv = nuevos_pv)
             return True
     
     def ataque(self, pokemon_dañado):
