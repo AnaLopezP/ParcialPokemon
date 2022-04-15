@@ -47,7 +47,7 @@ if __name__ == '__main__':
         pokemon_1 = funciones.get_pokemon_de_lista(pokemons_1_objetos, "Entrenador 1")
         print("Entrenador 2:")
         pokemon_2 = funciones.get_pokemon_de_lista(pokemons_2_objetos, "Entrenador 2")
-        while funciones.Pokemon.esta_vivo(pokemon_1) == False or funciones.Pokemon.esta_vivo(pokemon_2) == False:
+        while funciones.Pokemon.esta_vivo(pokemon_1) == False and funciones.Pokemon.esta_vivo(pokemon_2) == False:
             funciones.Pokemon.ataque(pokemon_1,pokemon_2)
             if funciones.Pokemon.esta_vivo(pokemon_2) == False:
                 funciones.Pokemon.ataque(pokemon_2, pokemon_1)
