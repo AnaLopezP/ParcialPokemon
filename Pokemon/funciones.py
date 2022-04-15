@@ -191,11 +191,9 @@ def get_pokemon_de_lista(lista, entrenador):
         get_pokemon_de_lista(lista, entrenador)
 
 def entrenador_derrotado(lista, entrenador):
-    if Pokemon.esta_vivo(lista[0]) == True:
-        if Pokemon.esta_vivo(lista[1]) == True:
-            if Pokemon.esta_vivo(lista[2]) == True:
-                print(str(entrenador) + " ha sido derrotado.")
-                return False
+    if Pokemon.esta_vivo(lista[0]) == True and Pokemon.esta_vivo(lista[1]) == True and Pokemon.esta_vivo(lista[2]) == True:
+        print(str(entrenador) + " ha sido derrotado.")
+        return False
     else:
         return True
         
