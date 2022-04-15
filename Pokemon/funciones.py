@@ -98,6 +98,7 @@ class Pokemon:
     def esta_vivo(self, pokemon):
         if Pokemon.get_pv(pokemon) == 0:
             print("El pokemon " + str(Pokemon.get_nombre(pokemon)) + " ha sido debilitado")
+            return True
         else:
             return False
 
@@ -178,4 +179,21 @@ def sacar_pokemon(archivo, lista):
             lista.append(i)
         print(lista)
             
+def get_pokemon_de_lista(lista, entrenador):
+    print("¿Que pokemon quieres sacar a luchar? Elija 0, 1, 2")
+    respuesta = int(input())
+    if Pokemon.esta_vivo(lista[respuesta]) == False:
+        print(str(entrenador) + " saca a " + str(Pokemon.get_nombre(lista[respuesta])) + " al combate")
+    else:
+        print("Elija a otro pokemon")
+        get_pokemon_de_lista(lista, entrenador)
 
+def entrenador_derrotado(lista, entrenador):
+    if Pokemon.esta_vivo(lista[0]) == True:
+        if Pokemon.esta_vivo(lista[1]) == True:
+            if Pokemon.esta_vivo(lista[2]) == True:
+                print(str(entrenador) + " ha sido derrotado.")
+                return False
+    else:
+        return True
+        
