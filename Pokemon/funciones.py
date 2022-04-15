@@ -115,7 +115,7 @@ class Pokemon:
         else:
             return False
     
-    def __str__(self):
+    def cadena(self):
         cadena = "Tu pokemon se llama " + str(self.nombre) + " , de id " + str(self.id) + ". Su arma es " + str(self.arma) + " , y los puntos de vida, ataque y defensa son: " + str(self.pv) + str(self.pa) + str(self.pd), + " respectivamente."
         return cadena
 
