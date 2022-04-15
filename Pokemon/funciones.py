@@ -104,9 +104,9 @@ class Pokemon:
     def defensa(self, pokemon_dañado):
         puntos_daño = int(input())
         if puntos_daño < Pokemon.get_pd(pokemon_dañado):
-            return True
-        else:
             return False
+        else:
+            return True
     
     def ataque(self, pokemon_dañado):
         if Pokemon.defensa(self, pokemon_dañado) == True:
