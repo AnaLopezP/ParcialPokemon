@@ -101,22 +101,22 @@ class Pokemon:
         else:
             return False
 
-    def defensa(self, puntos_daño):
+    def defensa(self):
+        puntos_daño = input()
         if puntos_daño < self.pd:
             return False
         else:
             return True
     
     def ataque(self, pokemon_dañado):
-        puntos_daño = input()
-        if Pokemon.defensa(puntos_daño) == True:
+        if Pokemon.defensa() == True:
             print("El pokemon " + str(pokemon_dañado) + " ha sido dañado")
             return True
         else:
             return False
     
     def __str__(self):
-        cadena = "Tu pokemon se llama " + str(self.nombre) + " , de id " + str(self.id) + ". Su arma es " + str(self.arma) + " , y los puntos de vida, ataque y defensa son: " + str(self.pv) + " " + str(self.pa) +" " +  str(self.pd) + " respectivamente."
+        cadena = "Tu pokemon se llama " + str(self.nombre) + " , de id " + str(self.id) + ". Su arma es " + str(self.arma) + " , y los puntos de vida, ataque y defensa son: " + str(self.pv) + " " + str(self.pa) + " " +  str(self.pd) + " respectivamente."
         return cadena
 
 class Pokemon_Agua(Pokemon):
