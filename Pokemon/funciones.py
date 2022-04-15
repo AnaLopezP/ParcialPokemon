@@ -1,8 +1,6 @@
 import random
 import csv
 
-from Pokemon.main import Charmander
-
 lista_id = []
 pokemons_2 = []
 pokemons_1 = []
