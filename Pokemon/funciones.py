@@ -1,6 +1,8 @@
 import random
 import csv
 
+from Pokemon.main import Charmander
+
 lista_id = []
 pokemons_2 = []
 pokemons_1 = []
@@ -109,7 +111,7 @@ class Pokemon:
             return False
     
     def ataque(self, pokemon_dañado):
-        if Pokemon.defensa(self) == True:
+        if Pokemon.defensa(self, pokemon_dañado) == True:
             print("El pokemon " + str(Pokemon.get_nombre(pokemon_dañado)) + " ha sido dañado")
         else:
             print("El ataque no ha tenido efecto.")
