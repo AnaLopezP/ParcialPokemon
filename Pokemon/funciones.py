@@ -1,6 +1,7 @@
 import random
 import csv
 
+lista_id = []
 pokemons_2 = []
 pokemons_1 = []
 class formato_excepcion(BaseException):
@@ -25,19 +26,15 @@ class Pokemon:
         self.pv = pv
         self.pa = pa
         self.pd = pd
-        if isinstance(id, int):
-            pass
-        else:
+        if not isinstance(id, int):
             raise formato_excepcion("El ID tiene que ser un número")
-
-        if isinstance(nombre, str):
-            pass
         else:
+            lista_id.append(id)
+
+        if not isinstance(nombre, str):
             raise formato_excepcion("Ese nombre no es valido.")
         
-        if isinstance(arma, str):
-            pass
-        else:
+        if not isinstance(arma, str):
             raise formato_excepcion("Esa arma no es valida.")
 
         if isinstance(pv, int):
@@ -57,6 +54,9 @@ class Pokemon:
                 raise rango_excepcion("Los PD tienen que estar entre 1 y 10")
         else:
             raise formato_excepcion("Esos puntos de defensa no son validos.")
+
+    def __del__(self):
+        lista_id.remove(self.id)
             
 
     def get_id(self):
@@ -114,6 +114,10 @@ class Pokemon:
             return True
         else:
             return False
+    
+    def __str__(self):
+        cadena = "Tu pokemon se llama " + str(self.nombre) + " , de id " + str(self.id) + ". Su arma es " + str(self.arma) + " , y los puntos de vida, ataque y defensa son: " + str(self.pv) + str(self.pa) + str(self.pd), + " respectivamente."
+        return cadena
 
 class Pokemon_Agua(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
@@ -164,7 +168,7 @@ def crear_pokemon():
     print("Tu pokemon se llama " + str(pokemon.nombre) + " , de id " + str(pokemon.id) + ". Su arma es " + str(pokemon.arma) + " , y los puntos de vida, ataque y defensa son: " + str(pokemon.pv) + str(pokemon.pa) + str(pokemon.pd), + " respectivamente.")
 
 
-def sacar_pokemon(archivo, lista):
+'''def sacar_pokemon(archivo, lista):
     with open (archivo) as file:
         delimitador = ';'
         leer = csv.DictReader(file, delimiter = delimitador)
@@ -178,4 +182,4 @@ sacar_pokemon('coach_1_pokemons.csv', pokemons_1)
 sacar_pokemon('coach_2_pokemons.csv', pokemons_2)
 
 pokemon1 = Pokemon(pokemons_1[0], pokemons_1[1], pokemons_1[2], pokemons_1[3], pokemons_1[4], pokemons_1[5])
-pokemon2 = Pokemon(pokemons_2[0], pokemons_2[1], pokemons_2[2], pokemons_2[3], pokemons_2[4], pokemons_2[5])
+pokemon2 = Pokemon(pokemons_2[0], pokemons_2[1], pokemons_2[2], pokemons_2[3], pokemons_2[4], pokemons_2[5])'''
