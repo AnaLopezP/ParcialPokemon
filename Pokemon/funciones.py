@@ -110,10 +110,9 @@ class Pokemon:
     
     def ataque(self, pokemon_dañado):
         if Pokemon.defensa(self) == True:
-            print("El pokemon " + str(pokemon_dañado.nombre) + " ha sido dañado")
-            return True
+            print("El pokemon " + str(Pokemon.get_nombre(pokemon_dañado)) + " ha sido dañado")
         else:
-            return False
+            print("El ataque no ha tenido efecto.")
     
     def __str__(self):
         cadena = "Tu pokemon se llama " + str(self.nombre) + " , de id " + str(self.id) + ". Su arma es " + str(self.arma) + " , y los puntos de vida, ataque y defensa son: " + str(self.pv) + " " + str(self.pa) + " " +  str(self.pd) + " respectivamente."
