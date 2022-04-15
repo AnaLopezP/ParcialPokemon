@@ -113,7 +113,7 @@ class Pokemon:
     def ataque(self, pokemon_dañado):
         if Pokemon.defensa(self, pokemon_dañado) == True:
             print("El pokemon " + str(Pokemon.get_nombre(pokemon_dañado)) + " ha sido dañado")
-            print(Pokemon.get_pv(pokemon_dañado))
+            print("Puntos de vida: " + str(Pokemon.get_pv(pokemon_dañado)))
         else:
             print("El ataque no ha tenido efecto.")
     
