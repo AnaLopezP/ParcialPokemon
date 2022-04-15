@@ -42,11 +42,12 @@ if __name__ == '__main__':
     pokemons_2_objetos.append(pokemon3coach2)
 
     print("-----------------------COMIENZA EL COMBATE----------------------")
-    #while funciones.entrenador_derrotado == False:
-    print("Entrenador 1:")
-    funciones.get_pokemon_de_lista(pokemons_1_objetos, "Entrenador 1")
-    print("Entrenador 2:")
-    funciones.get_pokemon_de_lista(pokemons_2_objetos, "Entrenador 2")
-    
+    while funciones.entrenador_derrotado == False:
+        print("Entrenador 1:")
+        funciones.get_pokemon_de_lista(pokemons_1_objetos, "Entrenador 1")
+        print("Entrenador 2:")
+        funciones.get_pokemon_de_lista(pokemons_2_objetos, "Entrenador 2")
+        funciones.Pokemon.ataque()
+
 
     

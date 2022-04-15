@@ -182,8 +182,10 @@ def sacar_pokemon(archivo, lista):
 def get_pokemon_de_lista(lista, entrenador):
     print("¿Que pokemon quieres sacar a luchar? Elija 0, 1, 2")
     respuesta = int(input())
+    elegido = lista[respuesta]
     if Pokemon.esta_vivo(lista[respuesta]) == False:
         print(str(entrenador) + " saca a " + str(Pokemon.get_nombre(lista[respuesta])) + " al combate")
+        return elegido
     else:
         print("Elija a otro pokemon")
         get_pokemon_de_lista(lista, entrenador)
