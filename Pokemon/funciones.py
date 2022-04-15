@@ -95,9 +95,9 @@ class Pokemon:
     def set_pd(self, pd):
         self.pd= pd
 
-    def esta_vivo(self):
-        if self.pv == 0:
-            return True
+    def esta_vivo(self, pokemon):
+        if Pokemon.get_pv(pokemon) == 0:
+            print("El pokemon " + str(Pokemon.get_nombre(pokemon)) + " ha sido debilitado")
         else:
             return False
 
@@ -106,11 +106,13 @@ class Pokemon:
         if puntos_daño < Pokemon.get_pd(pokemon_dañado):
             return False
         else:
-            return True
+            return puntos_daño
     
     def ataque(self, pokemon_dañado):
         if Pokemon.defensa(self, pokemon_dañado) == True:
             print("El pokemon " + str(Pokemon.get_nombre(pokemon_dañado)) + " ha sido dañado")
+            nuevos_pv = Pokemon.get_pv(pokemon_dañado) - Pokemon.defensa(self, pokemon_dañado)
+            Pokemon.set_pv(nuevos_pv)
         else:
             print("El ataque no ha tenido efecto.")
     
