@@ -96,7 +96,7 @@ class Pokemon:
         self.pd= pd
 
     def esta_vivo(pokemon):
-        if Pokemon.get_pv(pokemon) == 0:
+        if Pokemon.get_pv(pokemon) <= 0:
             print("El pokemon " + str(Pokemon.get_nombre(pokemon)) + " ha sido debilitado")
             return True
         else:
