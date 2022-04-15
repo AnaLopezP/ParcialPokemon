@@ -56,5 +56,10 @@ if __name__ == '__main__':
         else: 
             pokemon_2 = funciones.get_pokemon_de_lista(pokemons_2_objetos, "Entrenador 2")
 
+    if funciones.entrenador_derrotado(pokemons_1_objetos, "Entrenador 1") == False:
+        print("Gana el Entrenador 2")
+    elif funciones.entrenador_derrotado(pokemons_2_objetos, "Entrenador 2") == False:
+        print("Gana el Entrenador 1")
 
+    print("--------------------------FIN DE LA PARTIDA-------------------------")
     
