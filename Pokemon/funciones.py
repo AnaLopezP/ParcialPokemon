@@ -138,13 +138,13 @@ class Pokemon_Aire(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
         super().__init__(id, nombre, arma, pv, pa, pd)
 
-    def fight_defense():
+    def fight_defense(self, pokemon_dañado):
         afecta = random.randint(1, 2)
         if afecta == 1:
             print("Ha esquivado el ataque")
             return False
         elif afecta == 2:
-            return True
+            Pokemon.ataque(self, pokemon_dañado)
 
 class Pokemon_Electro(Pokemon):
     def __init__(self, id, nombre, arma, pv, pa, pd):
