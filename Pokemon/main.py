@@ -51,9 +51,10 @@ if __name__ == '__main__':
             funciones.Pokemon.ataque(pokemon_1,pokemon_2)
             if funciones.Pokemon.esta_vivo(pokemon_2) == False:
                 funciones.Pokemon.ataque(pokemon_2, pokemon_1)
-        if funciones.Pokemon.esta_vivo(pokemon_1) == True:
+
+        if funciones.Pokemon.esta_vivo(pokemon_1) == True and funciones.entrenador_derrotado(pokemons_1_objetos, "Entrenador 1") == True:
             pokemon_1 = funciones.get_pokemon_de_lista(pokemons_1_objetos, "Entrenador 1")
-        else: 
+        elif funciones.Pokemon.esta_vivo(pokemon_2) == True and funciones.entrenador_derrotado(pokemons_2_objetos, "Entrenador 2") == True: 
             pokemon_2 = funciones.get_pokemon_de_lista(pokemons_2_objetos, "Entrenador 2")
 
     if funciones.entrenador_derrotado(pokemons_1_objetos, "Entrenador 1") == False:
