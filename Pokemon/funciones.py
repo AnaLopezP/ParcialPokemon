@@ -170,7 +170,7 @@ def crear_pokemon():
     print("Tu pokemon se llama " + str(pokemon.nombre) + " , de id " + str(pokemon.id) + ". Su arma es " + str(pokemon.arma) + " , y los puntos de vida, ataque y defensa son: " + str(pokemon.pv) + str(pokemon.pa) + str(pokemon.pd), + " respectivamente.")
 
 
-'''def sacar_pokemon(archivo, lista):
+def sacar_pokemon(archivo, lista):
     with open (archivo) as file:
         delimitador = ';'
         leer = csv.DictReader(file, delimiter = delimitador)
@@ -183,5 +183,5 @@ def crear_pokemon():
 sacar_pokemon('coach_1_pokemons.csv', pokemons_1)
 sacar_pokemon('coach_2_pokemons.csv', pokemons_2)
 
-pokemon1 = Pokemon(pokemons_1[0], pokemons_1[1], pokemons_1[2], pokemons_1[3], pokemons_1[4], pokemons_1[5])
+'''pokemon1 = Pokemon(pokemons_1[0], pokemons_1[1], pokemons_1[2], pokemons_1[3], pokemons_1[4], pokemons_1[5])
 pokemon2 = Pokemon(pokemons_2[0], pokemons_2[1], pokemons_2[2], pokemons_2[3], pokemons_2[4], pokemons_2[5])'''
