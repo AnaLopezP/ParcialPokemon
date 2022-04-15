@@ -102,7 +102,7 @@ class Pokemon:
             return False
 
     def defensa(self):
-        puntos_daño = input()
+        puntos_daño = int(input())
         if puntos_daño < self.pd:
             return False
         else:
